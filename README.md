@@ -10,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-pgvector-336791?logo=postgresql)](https://www.postgresql.org/)
 [![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL%20v3-blue)](./LICENSE)
 
 </div>
 
