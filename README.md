@@ -193,6 +193,24 @@ BossHunter 源码位于 `job-agent/`，由 Spring Boot 后端自动管理进程�
 
 ## 效果展示
 
+### 🎯 Boss 直聘自动投递（AI Agent 求职投递）
+
+BossHunter 智能投递 Agent：自动筛选匹配岗位、生成个性化求职语、批量投递简历。
+
+投递任务流水线：
+
+![BossHunter 投递流水线](docs/screenshots/bosshunter-pipeline.png)
+
+每日投递汇总：
+
+![BossHunter 每日汇总](docs/screenshots/bosshunter-daily-summary.png)
+
+投递仪表盘（动图）：
+
+![BossHunter 仪表盘](docs/screenshots/bosshunter-dashboard.gif)
+
+---
+
 ### 简历与面试
 
 面试中心：
@@ -249,8 +267,8 @@ Skill 出题 + JD 解析：
 ## 项目结构
 
 ```
-interview-guide/
-├── app/                              # 后端应用
+OfferPilot/
+├── app/                              # 后端应用（Spring Boot）
 │   ├── src/main/java/interview/guide/
 │   │   ├── App.java                  # 主启动类
 │   │   ├── common/                   # 通用基础能力
@@ -281,7 +299,15 @@ interview-guide/
 │       ├── skills/                   # 面试 Skill 定义和参考题库
 │       └── voice-interview-opening.yml # 语音面试开场白配置
 │
-├── frontend/                         # 前端应用
+├── job-agent/                        # BossHunter 投递 Agent（Python + LLM）
+│   ├── agent/                        # 投递 Agent 核心逻辑
+│   ├── browser/                      # Chrome 远程调试封装
+│   ├── config.yaml                   # 投递配置（岗位、风格、目标数）
+│   ├── data/                         # 简历、数据库存储
+│   ├── docs/                         # 投递模块文档与演示素材
+│   └── main.py                       # 投递 Agent 入口
+│
+├── frontend/                         # 前端应用（React + Vite）
 │   ├── src/
 │   │   ├── api/                      # API 接口
 │   │   ├── components/               # 公共组件
@@ -292,10 +318,13 @@ interview-guide/
 │   ├── package.json
 │   └── vite.config.ts
 │
+├── docs/
+│   └── screenshots/                  # 效果展示截图
+│
 ├── docker-compose.yml                # 完整部署：前端 + 后端 + PostgreSQL + Redis + MinIO
 ├── docker-compose.dev.yml            # 本地开发依赖：PostgreSQL + Redis + RustFS
-├── docs/                             # 架构设计与改造记录
 ├── .env.example                      # 环境变量示例
+├── SETUP_API_KEYS.md                 # API Key 配置教程
 └── README.md
 ```
 
@@ -315,8 +344,8 @@ interview-guide/
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/Snailclimb/interview-guide.git
-cd interview-guide
+git clone https://github.com/ysj2005/OfferPilot.git
+cd OfferPilot
 ```
 
 ### 2. 配置环境变量
