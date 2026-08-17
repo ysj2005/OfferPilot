@@ -1,22 +1,35 @@
 <div align="center">
 
-**智能 AI 面试官平台** - 基于大语言模型的简历分析、模拟面试和 RAG 知识库系统
+# 🚀 OfferPilot
+
+**从投简历到拿 Offer 的全流程 AI 求职助手** — 自动投递 Boss 直聘 + 简历分析 + 模拟面试（文字/语音）+ RAG 知识库，让 AI 陪你走完求职每一步
 
 [![Java](https://img.shields.io/badge/Java-25-orange?logo=openjdk)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1-green?logo=springboot)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-18.3-blue?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-pgvector-336791?logo=postgresql)](https://www.postgresql.org/)
-
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 
 </div>
 
+---
+
+## ✨ 项目亮点
+
+- 🎯 **自动投递**：基于 LLM Agent 的 Boss 直聘智能投递，自动筛选匹配岗位、生成个性化求职语
+- 📄 **简历分析**：上传简历即可获得 AI 评分与优化建议
+- 🎤 **模拟面试**：文字面试 + 实时语音对话，支持多方向题库
+- 📚 **RAG 知识库**：上传资料构建专属知识库，面试问答有据可依
+- 📅 **面试安排**：日程管理与提醒，面试流程一目了然
+- 🔌 **多模型支持**：兼容 OpenAI 协议，可接入 DeepSeek、通义千问等主流模型
 
 ---
 
 ## 项目介绍
 
-InterviewGuide 是一个集成了简历分析、模拟面试（文字 + 语音）、面试安排、知识库管理、知识库题库面试和多模型配置的智能面试辅助平台。系统利用大语言模型（LLM）、向量数据库、Redis Stream 异步任务和实时语音技术，为求职者、HR 和培训机构提供智能化的简历评估、面试练习、知识库问答和面试日程管理能力。
+OfferPilot（原 InterviewGuide）是一个融合了**自动求职投递**与**AI 面试准备**的全流程求职平台。系统利用大语言模型（LLM）、向量数据库、Redis Stream 异步任务、实时语音技术和浏览器自动化 Agent，为求职者提供从简历投递到面试训练的完整闭环能力。
 
 ## 系统架构
 
