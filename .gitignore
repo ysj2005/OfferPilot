@@ -1,0 +1,57 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+/app/build
+/app/bin
+/.claude/*
+!/.claude/rules/
+!/.claude/rules/**
+/.idea
+/.vscode
+
+# Environment variables
+.env
+
+# Logs and heap dumps (runtime artifacts)
+*.log
+*.hprof
+test-output.txt
+
+# IDEA code analysis
+qodana.yaml
+
+# Application-specific local config
+app/src/main/resources/application-dev.yml
+
+# Documentation that is internal-only (kept out of public repo)
+# Note: SETUP_API_KEYS.md is now included as a public guide
+# /docs  # docs folder is included in repo
+
+# AI Assistant documentation (private)
+CLAUDE.local.md
+GEMINI.md
+
+# Playwright MCP
+.playwright-mcp/
+/.agents
+skills-lock.json
+
+# Underthese analysis tool data
+.ua/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# BossHunter job-agent runtime (already covered by job-agent/.gitignore, here for safety)
+/job-agent/data/
+/job-agent/config.yaml
+/job-agent/debug.log
+/job-agent/data/resumes/
+/job-agent/.pytest_cache/
+
+# MinIO / RustFS object storage runtime data (contains uploaded user files)
+/minio-data/
+/.rustfs/
